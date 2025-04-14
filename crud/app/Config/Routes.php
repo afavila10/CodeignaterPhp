@@ -6,7 +6,18 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 //$routes->get('/', 'Home::index');
-// GROUP ROUTES
+
+//Pagina principal
+$routes->get('/Home-codeignater', 'Home::index');
+
+
+//visitas generales
+$routes->get('/user-status', 'UserStatus::index');
+$routes->get('/roles-table', 'Role::index');
+$routes->get('/profiles-table', 'Profiles::index');
+$routes->get('/users-table', 'Users::index');
+
+// GROUP USER STATUS
 $routes->group("userStatus",function($routes){
     $routes->get("/", "UserStatus::index");
     $routes->get("show", "UserStatus::index");
@@ -50,13 +61,11 @@ $routes->group("users", function($routes){
 
 });
 
-// LOGIN 
+// LOGIN (AuthController)
 $routes->get('login', 'Auth::login');          // Muestra el formulario
-$routes->post('login', 'Auth::loginPost');     // Procesa el login
+$routes->post('login-post', 'Auth::loginPost');     // Procesa el login
 $routes->get('logout', 'Auth::logout');        // Cierra sesión
 
-// register 
+// register (RegisterController)
 $routes->get('register', 'Register::register');          // Muestra el formulario   // Cierra sesión
 $routes->post('register/store', 'Register::store');
-
-

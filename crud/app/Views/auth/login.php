@@ -14,8 +14,7 @@
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
         <?php endif; ?>
-
-        <form method="post" action="<?= base_url('controllers/Auth') ?>">
+        <form action="/login-post" method="post">   <!--< - ?base_url('Controllers/Auth') ? >-->
             <div class="mb-3">
                 <label for="username" class="form-label">User name</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -26,7 +25,8 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100" href="/app/Views/UserStatus/status_view.php">Login</button>
+            <button type="submit" class="btn btn-primary w-100">Login</button><br><br>
+            <button type="submit" class="btn btn-primary w-100" >Register</button>
         </form>
     </div>
 

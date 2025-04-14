@@ -18,6 +18,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 //this is the users state class
 class UserStatus extends Controller
 {
+
     //Variable declarations.
     private $primaryKey;
     private $StatusModel;
@@ -40,7 +41,7 @@ class UserStatus extends Controller
     
     	// Get data App\Models\UserStatusModel
     	$this->data[$this->model] = $this->StatusModel->orderBy($this->primaryKey, 'ASC')->findAll();
-    	return view('userStatus/status_view', $this->data);
+    	return view('UserStatus/status_view', $this->data);
 	}
 
 	// This method consists of creating, obtains the data from the POST method, return Json

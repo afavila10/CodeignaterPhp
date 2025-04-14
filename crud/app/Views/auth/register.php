@@ -33,10 +33,10 @@
 
             <div class="mb-3">
                 <label for="User_Status_fk" class="form-label">User status</label>
-                <input type="number" class="form-control" id="User_Status_fk" name="User_status_fk" required>
+                <input type="number" class="form-control" id="User_status_fk" name="User_status_fk" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+            <button type="submit" class="btn btn-primary w-100" >Registrarse</button>
         </form>
     </div>
 

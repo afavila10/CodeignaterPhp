@@ -6,11 +6,6 @@ use App\Models\RegisterModel;
 
 class Register extends BaseController
 {
-    public function login()
-    {
-        return view('auth/login');
-    }
-
     public function register()
     {
         return view('auth/register'); // Muestra el formulario
@@ -25,7 +20,7 @@ class Register extends BaseController
             'username' => 'required|min_length[3]',
             'password' => 'required|min_length[6]',
             'Role_fk' => 'required|integer',
-            'User_Status_fk' => 'required|integer',
+            'User_status_fk' => 'required|integer',
         ]);
 
 
@@ -38,14 +33,15 @@ class Register extends BaseController
             'User_user' => $this->request->getPost('username'),
             'User_password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
             'Roles_fk' => $this->request->getPost('Role_fk'),
-            'User_status_fk' => $this->request->getPost('User_Status_fk'),
+            'User_status_fk' => $this->request->getPost('User_status_fk'),
         ];
-        dd($data); // Esto imprimirá el array y detendrá la ejecución
+        //dd($data); // Esto imprimirá el array y detendrá la ejecución
 
 
         $model = new RegisterModel();
         $model->insert($data);
 
+        //dd('Registrado correctamente, se debería redirigir ahora...');
         return redirect()->to('auth/login')->with('success', 'Usuario registrado correctamente');
     }
 

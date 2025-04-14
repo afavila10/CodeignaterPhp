@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="Home-codeignater">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">User Status</a>
+          <a class="nav-link" href="/user-status">User Status</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Roles</a>
+          <a class="nav-link" href="/roles-table">Roles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" href="/profiles-table">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">User</a>
+          <a class="nav-link" href="/users-table">User</a>
         </li>
       </ul>
       <form class="d-flex">

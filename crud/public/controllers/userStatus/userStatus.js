@@ -10,6 +10,9 @@ const textConfirm = 'Press a button!\nEither OK or Cancel.';
 const btnSubmit = document.getElementById('btnSubmit');
 const mainApp = new Main(modalId, formId, classEdit, preloadId);
 
+
+
+
 /**
  * these lines of code are declaring and initicalizing variables in a Javaascript fle.Here is a 
  * brackdowm of what each variable is used for:*/

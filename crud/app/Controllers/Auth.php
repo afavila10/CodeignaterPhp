@@ -15,7 +15,7 @@ class Auth extends BaseController
     public function loginPost()
     {
         $session = session();
-        $model = new UserModel();
+        $model = new UsersModel();
 
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
@@ -30,7 +30,7 @@ class Auth extends BaseController
                     'username' => $user['User_user'],
                     'isLoggedIn' => true
                 ]);
-                return redirect()->to('/status_view'); // Cambia esto por tu vista principal
+                return redirect()->to('/Home-codeignater'); // Cambia esto por tu vista principal
             } else {
                 return redirect()->back()->with('error', 'Contraseña incorrecta');
             }
